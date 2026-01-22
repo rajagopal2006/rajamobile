@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phones</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header>
+        <h1>Phone Store</h1>
+    </header>
+
+    <!-- Home Section -->
+    <div class="section home active">
+        Welcome to the Phone Store
+    </div>
+
+    <!-- Products Section -->
+    <div class="section products" id="products">
+        <div class="card">
+            <img src="i15.jpg" alt="iPhone 15 Pro">
+            <h3>iPhone 15 Pro</h3>
+            <p>$999</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="samsung.webp" alt="Samsung Galaxy S23">
+            <h3>Samsung Galaxy S23</h3>
+            <p>$899</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="google.jpg" alt="Google Pixel 8">
+            <h3>Google Pixel 8</h3>
+            <p>$799</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="one plus.jpg" alt="OnePlus 11">
+            <h3>OnePlus 11</h3>
+            <p>$699</p>
+            <button>Add to Cart</button>
+        </div>
+         <div class="card">
+            <img src="my phone.jpg" alt="vivo">
+            <h3>vivo t4x</h3>
+            <p>$899</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(sectionId)?.classList.add('active');
+        }
+    </script>
+</body>
+</html>

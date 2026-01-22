@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Record</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <h1>Create a New Phone Record</h1>
+    <form id="phoneForm">
+        <input type="text" id="name" placeholder="Phone Name" required><br><br>
+        <input type="number" id="price" placeholder="Price" required><br><br>
+        <button type="submit">Add Phone</button>
+    </form>
+
+    <h2>Phone Records:</h2>
+    <ul id="records"></ul>
+
+    <script>
+        const form = document.getElementById('phoneForm');
+        const recordsList = document.getElementById('records');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const price = document.getElementById('price').value;
+            const li = document.createElement('li');
+            li.textContent = `${name} - $${price}`;
+            recordsList.appendChild(li);
+            form.reset();
+        });
+    </script>
+</body>
+</html>
